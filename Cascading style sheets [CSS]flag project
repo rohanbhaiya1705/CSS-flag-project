@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flags</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="flag">
+        <div class="stripe top"></div>
+        <div class="stripe middle"></div>
+        <div class="stripe bottom"></div>
+    </div>
+</body>
+</html>
+
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.flag {
+    width: 300px;
+    height: 200px;
+    display: flex;
+}
+
+.stripe {
+    width: 33.33%;
+}
+
+.top {
+    background-color: #0055A4; /* Blue */
+}
+
+.middle {
+    background-color: #FFFFFF; /* White */
+}
+
+.bottom {
+    background-color: #EF4135; /* Red */
+}
+
+.diagonal-flag {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    background-color: #007A5E; /* Green */
+}
+
+.diagonal-flag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFD700; /* Gold */
+    transform: skewY(-20deg);
+}
+
+.star {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
